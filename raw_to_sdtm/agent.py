@@ -228,7 +228,7 @@ def run_agent_session(ctx: MappingContext) -> dict:
                     last_issues = []  # reset until next verify
 
             elif name == "verify_result":
-                result_payload = verify_sdtm(inp["values"], ctx.sdtm_spec)
+                result_payload = verify_sdtm(inp["values"], ctx.sdtm_spec, ctx.sdtm_domain)
                 if not result_payload["pass"]:
                     last_issues = result_payload["issues"]
                     ctx.verify_failures += 1
