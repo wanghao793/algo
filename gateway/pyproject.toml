@@ -1,0 +1,24 @@
+[project]
+name = "sdtm-gateway"
+version = "2.0.0"
+description = "SDTM Platform — FastAPI gateway"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115",
+  "uvicorn[standard]>=0.32",
+  "httpx[http2]>=0.27",
+  "pydantic>=2.9",
+  "python-multipart>=0.0.12",
+  "aiofiles>=24.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+  "pytest>=8.0",
+  "pytest-asyncio>=0.24",
+  "httpx>=0.27",
+]
